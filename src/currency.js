@@ -5,6 +5,7 @@ const Currency = (props) => {
 			<li className="list-group-item">
 				<div className="row">
 					<div className="col-sm-6">
+						<div className="currencySymbol">{props.symbol}</div>
 						<div className="currencyName">{props.name}</div>
 						<hr/>
 						<div className="currencyPrice"><strong>Price:</strong> ${props.price}0</div>

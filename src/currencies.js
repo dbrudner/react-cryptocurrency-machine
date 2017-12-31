@@ -32,6 +32,7 @@ class Currencies extends React.Component {
 					<Currency 
 						key={currency.name}
 						name={currency.name} 
+						symbol={currency.symbol}
 						rank={currency.rank}
 						price={currency.price_usd} 
 						onehour={currency.percent_change_1h} 
