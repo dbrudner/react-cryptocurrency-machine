@@ -39,9 +39,19 @@ body {
 	font-size: 40px;
 }
 
+.lead {
+	color: #d3d3d3;
+	margin-left: 70px;
+}
+
 .currencyPrice {
 	font-size: 20px;
 	margin-top: 30px;
+	text-align: center;
+}
+
+.currencyRank {
+	font-size: 20px;
 	text-align: center;
 }
 
@@ -52,8 +62,23 @@ body {
 
 .currencyPriceChange {
 	margin: 5px;
+	font-size: 16px;
 }
 
-.prices {
+.head {
+	font-weight: 700;
+}
 
+.change {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+th, td {
+	text-align: center !important;
+}
+
+table {
+	margin-top: 10px;
 }
