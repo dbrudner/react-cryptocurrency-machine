@@ -8,7 +8,7 @@ class Currencies extends React.Component {
 		super(props);
 
 		this.state = {
-			currencies: []
+			currencies: ""
 		}
 	}
 
@@ -16,20 +16,29 @@ class Currencies extends React.Component {
 		axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10').then(
 			response => {
 				this.setState({currencies: response.data});
-				console.log(response.data);
+
+				// console.log(response.data[0].id);
+				console.log(this.state.currencies[0].name)
 			})
 	}
 
 	render() {
-		return (
+
+		if (this.state.currencies) {
+			return (
 			<div className="list">
 				<ul className="list-group">
-				<Currency />
-				<Currency />
-				<Currency />
+				<Currency name={this.state.currencies[0].name}/>
 				</ul>
 			</div>
-		)
+			)	
+		}
+
+		else {
+			return null
+		}
+
+		
 		
 	}
 }

@@ -1,13 +1,16 @@
 import React from 'react'
 
-class Currency extends React.Component {
+const Currency = (props) => {
 
-	render() {
+	if (!props.name) {
+		return <div> loading </div>
+	}
+
 		return (
 			<li className="list-group-item">
 				<div className="row">
 					<div className="col-sm-6">
-						<div className="currencyName">Currency Name</div>
+						<div className="currencyName">{props.name}</div>
 						<hr/>
 						<div className="currencyPrice">Price in USD: $50</div>
 					</div>
@@ -26,7 +29,6 @@ class Currency extends React.Component {
 				</div>
 			</li>
 		)
-	}
 }
 
 export default Currency
