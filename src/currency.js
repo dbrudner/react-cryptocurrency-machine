@@ -12,11 +12,11 @@ class Currency extends React.Component {
 						<div className="currencyPrice">Price in USD: $50</div>
 					</div>
 					<div className="col-sm-6 prices">
-						<div class="panel panel-default">
-							<div class="panel-heading">
+						<div className="panel panel-default">
+							<div className="panel-heading">
 							Recent Price Changes
 							</div>
-							<div class="panel-body">
+							<div className="panel-body">
 								<div className="currencyPriceChange">% Change 1 hour: 2.9%</div>
 								<div className="currencyPriceChange">% Change 24 hour: 10.23%</div>
 								<div className="currencyPriceChange">% Change 7 days: 5.08%</div>

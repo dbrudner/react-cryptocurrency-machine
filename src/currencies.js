@@ -14,8 +14,9 @@ class Currencies extends React.Component {
 
 	componentDidMount() {
 		axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10').then(
-			data => {
-				this.setState({currencies: data.data});
+			response => {
+				this.setState({currencies: response.data});
+				console.log(response.data);
 			})
 	}
 
