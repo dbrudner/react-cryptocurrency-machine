@@ -18,17 +18,33 @@ class Currencies extends React.Component {
 				this.setState({currencies: response.data});
 
 				// console.log(response.data[0].id);
-				console.log(this.state.currencies[0].name)
+				console.log(this.state.currencies[0])
 			})
 	}
 
 	render() {
 
+
 		if (this.state.currencies) {
+
+			const currencyList = this.state.currencies.map((currency) => {
+				return (
+					<Currency 
+						key={currency.name}
+						name={currency.name} 
+						price={currency.price_usd} 
+						onehour={currency.percent_change_1h} 
+						oneday={currency.percent_change_24h} 
+						oneweek={currency.percent_change_7d}
+					/>
+				)
+				
+			})
+
 			return (
 			<div className="list">
 				<ul className="list-group">
-				<Currency name={this.state.currencies[0].name}/>
+				{currencyList}
 				</ul>
 			</div>
 			)	
